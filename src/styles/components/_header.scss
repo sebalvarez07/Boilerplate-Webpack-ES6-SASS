@@ -1,0 +1,93 @@
+.header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+
+    @include breakpoint(md){
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+}
+
+.ov-hidden {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.header-txt-in {
+    display: inline-block;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.full-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        margin-right: 1rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 100%;
+        border: solid .5rem $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .logo-img {
+            width: 2.5rem;
+        }
+    }
+
+    @include breakpoint(xl) {
+        .logo {
+            margin-right: 2rem;
+            width: 6rem;
+            height: 6rem;
+            .logo-img {
+                margin-top: -0.5rem;
+                width: 3.5rem;
+            }
+        }
+    }
+}
+
+
+.header {
+    .burger--header {
+        display: block;
+    
+        @include breakpoint(md){
+            display: none;
+        }
+    }
+}
+.header__contact {
+    display: none;
+
+    @include breakpoint(md){
+        display: block;
+    }
+}
+
+.header__contact, .logo-type {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+
+    @include breakpoint(sm) {
+        font-size: 2.5rem;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 3rem;
+    }
+}

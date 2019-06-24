@@ -1,7 +1,16 @@
-body {
-    background: black;
-}
+@import 'base/functions';
+@import 'base/settings';
+@import 'base/base';
+@import 'base/responsive';
 
-h1 {
-    color: red;
-}
+@import 'components/header';
+@import 'components/loader';
+@import 'components/layout';
+@import 'components/containers';
+@import 'components/intro';
+@import 'components/about';
+@import 'components/scroll-ui';
+@import 'components/project-list';
+@import 'components/contact-section';
+@import 'components/under';
+@import 'components/loco-intro';

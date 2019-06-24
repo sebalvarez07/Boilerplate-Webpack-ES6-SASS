@@ -1,0 +1,38 @@
+.main-container {
+    padding-left: remToVw(6rem);
+    padding-right: remToVw(6rem);
+}
+
+.main-inner-container {
+    max-width: remToVw(116rem);
+    margin-right: remToVw(6rem);
+}
+
+.main-inner-container--solo {
+    margin-left: auto;
+}
+
+.works {
+    .d1 {
+        margin-bottom: 9rem;
+    }
+}
+
+.container-sm {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: remToVw(6rem);
+    padding-right: remToVw(6rem);
+
+    @include breakpoint(xs) {
+        // max-width: remToVw_sm(61rem);
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include breakpoint(sm){
+        // max-width: remToVw(105.8rem);
+        padding-left: remToVw(32rem);
+        padding-right: remToVw(32rem);
+    }
+}

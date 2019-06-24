@@ -1,30 +1,20 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-    entry: [
-        '@babel/polyfill',
-        './src/js/app.js'
-    ],
+    entry: [ '@babel/polyfill', './src/js/app.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
     },
     devServer: {
-        contentBase: '.dist'
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: "css/style.css"
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/index.html'
-        }),
-        new Dotenv()
+        })
     ],
     module: {
         rules: [
@@ -45,7 +35,7 @@ module.exports = {
                     { loader: 'css-loader', options: { url: false, sourceMap: true } },
                     { loader: 'sass-loader', options: { sourceMap: true } }
                 ],
-            },
+            }
         ]
     },
     devtool: 'source-map',

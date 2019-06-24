@@ -1,0 +1,60 @@
+.works {
+    margin-bottom: $section-margin;
+
+    .d1 {
+        font-size: remToVw(17rem);
+    }
+}
+
+.card-project {
+    width: 100%;
+    position: relative;
+}
+.project__img {
+    font-size: 0;
+    width: 31.3rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.project__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.project__title {
+    margin: 0;
+    font-size: $font-size-md;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.project__date {
+    display: block;
+    color: #777777;
+    font-size: $font-size-sm;
+    line-height: 1;
+}
+
+.project__line {
+    width: 100%;
+    display: block;
+    height: .5rem;
+    background: $black;
+    transform-origin: 0 0;
+}
+
+.project-in__parent {
+    overflow: hidden;
+}
+
+.project-in {
+    display: inline-block;
+}

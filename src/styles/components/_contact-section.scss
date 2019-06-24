@@ -1,0 +1,64 @@
+.contact-section {
+    position: relative;
+    background: $black;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    color: $grey-lighter;
+    overflow: hidden;
+}
+
+.contact-tl {
+    font-size: 14rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 4rem;
+    left: 16rem;
+    line-height: 1;
+    margin: 0;
+    transform-origin: 0 50%;
+    transform: rotate(90deg);
+
+    @include breakpoint(xl) {
+        left: 22rem;
+    }
+}
+
+.contact-msg {
+    font-size: $font-size-sm;
+    margin-bottom: 7rem;
+
+    @include breakpoint(xl) {
+        font-size: 3rem;
+        max-width: 58rem;
+    }
+}
+
+.contact-email {
+    font-size: $font-size-md;
+    color: $white;
+    margin-bottom: 7rem;
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.contact-par {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.social-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-li {
+    margin-bottom: 1rem;
+}
+
+.social-a {
+    display: inline-block;
+    overflow: hidden;
+    font-size: $font-size-sm;
+}

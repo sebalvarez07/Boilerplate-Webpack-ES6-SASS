@@ -1,0 +1,19 @@
+@function remToVw($size){
+    $context: (1920 * 0.01) * .1rem;
+    @return ($size / $context) * 1vw;
+}
+
+@function remToVw_sm($size){
+    $context: (768 * 0.01) * .1rem;
+    @return ($size / $context) * 1vw;
+} 
+
+@function remToVw_xs($size){
+    $context: (480 * 0.01) * .1rem;
+    @return ($size / $context) * 1vw;
+} 
+
+@function pxToVw($size){
+    $context: (1920 * 0.01) * 10px;
+    @return ($size / $context) * 1vw;
+}

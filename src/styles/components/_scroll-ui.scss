@@ -1,0 +1,60 @@
+.rest-space {
+    position: relative;
+}
+
+.scroll-UI {
+    // width: 36rem;
+    position: absolute;
+    top: 0;
+    left: remToVw(6rem);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    &.fixed {
+        position: fixed;
+        top: remToVw(6rem);
+        left: remToVw(6rem);
+    }
+}
+
+.scroll-UI {
+    .s-ui-li {
+        font-size: 3rem;
+        font-weight: 500;
+        color: $black;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+
+        &.active {
+            .s-ui-a {
+                &:before {
+                    background: $black;
+                }
+            }
+        }
+    }
+
+    .s-ui-a {
+        position: relative;
+        &:before {
+            content: '';
+            height: .5rem;
+            width: 120%;
+            background: $black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: 0 50%;
+            transform: translateX(-50%) translateY(-50%) scaleX(0);
+            transition: transform 0.5s ease;
+        }
+
+        &:hover {
+            &:before {
+                transform: translateX(-50%) translateY(-50%) scaleX(1);
+
+            }
+        }
+    }
+}

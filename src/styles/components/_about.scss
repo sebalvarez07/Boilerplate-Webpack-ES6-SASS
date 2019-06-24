@@ -1,0 +1,64 @@
+.v-hidden-loco {
+    visibility: hidden;
+}
+
+.v-hidden-intro {
+    visibility: hidden;
+}
+
+.v-hidden-about {
+    visibility: hidden;
+}
+
+.v-hidden-burger {
+    visibility: hidden;
+}
+
+.v-hidden-projects {
+    visibility: hidden;
+}
+
+.about {
+    padding-left: remToVw(4.5rem);
+    padding-bottom: 4rem;
+    position: relative;
+    margin-bottom: remToVw(15rem);
+
+    .about-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: .5rem;
+        height: 100%;
+        background: black;
+        display: block;
+        transform-origin: 50% 0;
+    }
+
+    .about__txt {
+        margin: 0;
+        font-size: remToVw(5rem);
+        line-height: remToVw(7.4rem);
+        font-weight: 300;
+
+        > * {
+            overflow: hidden;
+        }
+    }
+
+    .about__title {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4rem;
+        font-size: 1.6rem;
+        color: $black;
+        transform-origin: 100% 0;
+        transform: translateX(-100%) rotate(-90deg);
+        overflow: hidden;
+
+        .about-in {
+            display: inline-block;
+        }
+    }
+}

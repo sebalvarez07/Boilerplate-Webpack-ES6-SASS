@@ -1,0 +1,44 @@
+html {
+    font-size: 62.5%;    // The idea is that 16 * 625 = 10 (10px = 1rem) --> so if we say 2rem = 20px
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    height: 100%;
+    font-family: $font-main;
+    font-size: $m-size;
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    // default is: content-box
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.d1 {
+    font-size: $font-size-xl;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

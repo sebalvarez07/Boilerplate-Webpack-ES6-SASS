@@ -1,0 +1,50 @@
+.wrapper {
+    // overflow-x: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+$container-size: remToVw(17rem);
+
+.c-main__container {
+    width: 100vw;
+    background: $grey-lighter;
+    box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+
+    @include breakpoint(md){
+        // width: calc(100vw - #{$container-size});
+    }
+}
+
+.c-main__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: $grey-lighter;
+
+    @include breakpoint(md){
+        width: calc(100vw - #{$container-size});
+    }
+}
+
+.c-under {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background: $grey-lighter;
+    height: 100vh;
+    z-index: 10;
+
+    @include breakpoint(md){
+        width: 50%;
+    }
+}
