@@ -11,13 +11,17 @@ $blue-loco: #4d84f1;
 }
 
 .intro-loco__container {
-    width: 70rem;
+    width: remToVw(120rem);
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
     margin: 0 auto;
     transform: translateY(-50%);
+
+    @include breakpoint(md) {
+        width: remToVw(70rem);
+    }
 }
 
 .loco-img__container {
@@ -48,7 +52,7 @@ $blue-loco: #4d84f1;
 .bg-action {
     position: absolute;
     z-index: 0;
-    width: calc(100% - 4px);
+    width: calc(100% - 6px);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -79,6 +83,10 @@ $blue-loco: #4d84f1;
         display: block;
         transform: scaleX(0);
     }
+
+    @include breakpoint(sm) {
+        width: calc(100% - 4px);
+    }
 }
 
 .loco-loader {
@@ -92,11 +100,15 @@ $blue-loco: #4d84f1;
 
 .loader-line {
     position: relative;
-    width: 27rem;
+    width: remToVw(47rem);
     height: .5rem;
     display: inline-block;
     transform-origin: 0 50%; 
     transform: scaleX(0);
+
+    @include breakpoint(md) {
+        width: remToVw(27rem);
+    }
 }
 
 .loader-line-s {
@@ -123,11 +135,17 @@ $blue-loco: #4d84f1;
 }
 
 .loader-per {
-    width: 7rem;
-    font-size: 2rem;
+    width: remToVw(12rem);
+    font-size: remToVw(4.5rem);
     font-weight: bold;
-    margin-left: 3rem;
+    margin-left: remToVw(5.5rem);
     overflow: hidden;
+
+    @include breakpoint(md) {
+        width: remToVw(7rem);
+        font-size: remToVw(2rem);
+        margin-left: remToVw(3rem);
+    }
 }
 
 .num, .percent {

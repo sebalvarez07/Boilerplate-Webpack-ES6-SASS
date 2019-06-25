@@ -1,7 +1,6 @@
 import { TweenMax } from 'gsap';
 import { onVisibilityChange } from './scroll-handlers';
 import SplitText from '../gsap-bonus/SplitText';
-// import { splitText } from './about-section';
 
 // Returns each line of text
 export const mySplitText = new SplitText(".about__txt", {type:"lines"});

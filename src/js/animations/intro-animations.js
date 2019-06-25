@@ -83,19 +83,19 @@ export class IntroAnimation {
 
     async playDoubleIntro () {
         return new Promise(resolve => {
-            // this.playLocoIntroAnimation();
-            // this.locomotiveIntro.eventCallback("onComplete", () => {
+            this.playLocoIntroAnimation();
+            this.locomotiveIntro.eventCallback("onComplete", () => {
 
-            //     // Remove loco intro from HTML
-            //     const introLoco = document.querySelector('.intro-locomotive');
-            //     introLoco.parentNode.removeChild(introLoco);
+                // Remove loco intro from HTML
+                const introLoco = document.querySelector('.intro-locomotive');
+                introLoco.parentNode.removeChild(introLoco);
 
                 this.playMainIntroAnimation(1);
                 this.mainIntro.eventCallback("onComplete", () => {
                     // Let app know when it has finished
                     resolve(true);
                 });
-            // });
+            });
         });
     }
 }

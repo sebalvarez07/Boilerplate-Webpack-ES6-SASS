@@ -4,6 +4,10 @@
     .d1 {
         font-size: remToVw(17rem);
         margin-bottom: 4rem;
+
+        .s-a-in-p {
+            display: block;
+        }
     }
 }
 
@@ -25,6 +29,8 @@
 .card-project {
     width: 100%;
     position: relative;
+    color: $black;
+    text-decoration: none;
 }
 .project__img {
     font-size: 0;

@@ -3,13 +3,11 @@ import './gsap-bonus/MorphSVGPlugin';
 import { IntroAnimation } from './animations/intro-animations';
 import { onScrollAnimation } from './animations/scrollAnimations';
 import { MenuAnimation } from './animations/menu';
-import { TweenMax } from 'gsap';
 
 const scrollContainer = document.querySelector('.c-main__container');
 const wrapper = document.querySelector('.wrapper');
 const menuAnimation = new MenuAnimation();
-// const introAnimation = new IntroAnimation();
-const scrollEvents = [ onScrollAnimation ];
+const introAnimation = new IntroAnimation();
 
 const menuListener = () => {
     const allBurgers = Array.from(document.querySelectorAll('.burger'));
@@ -28,10 +26,10 @@ const menuListener = () => {
 
 async function onLoad () {
     window.scrollTo(0, 0);
-    // introAnimation.playDoubleIntro().then(res => {
+    introAnimation.playDoubleIntro().then(res => {
         menuAnimation.init();
         menuListener();
-    // })
+    })
 }
 
 const resetMenuAnimation = () => {
