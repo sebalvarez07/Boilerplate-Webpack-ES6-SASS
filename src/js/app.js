@@ -1,17 +1,15 @@
 import '../styles/main.scss';
 import './gsap-bonus/MorphSVGPlugin';
 import { IntroAnimation } from './animations/intro-animations';
-import { scrollUI} from './animations/scroll-handlers';
-import { onScroll_animate_aboutSection } from './animations/about-section';
-import { onScroll_animate_projectCards } from './animations/project-cards';
+import { onScrollAnimation } from './animations/scrollAnimations';
 import { MenuAnimation } from './animations/menu';
 import { TweenMax } from 'gsap';
 
 const scrollContainer = document.querySelector('.c-main__container');
-const scrollEvents = [onScroll_animate_aboutSection, scrollUI, onScroll_animate_projectCards];
 const wrapper = document.querySelector('.wrapper');
 const menuAnimation = new MenuAnimation();
-const introAnimation = new IntroAnimation();
+// const introAnimation = new IntroAnimation();
+const scrollEvents = [ onScrollAnimation ];
 
 const menuListener = () => {
     const allBurgers = Array.from(document.querySelectorAll('.burger'));
@@ -30,10 +28,10 @@ const menuListener = () => {
 
 async function onLoad () {
     window.scrollTo(0, 0);
-    introAnimation.playDoubleIntro().then(res => {
+    // introAnimation.playDoubleIntro().then(res => {
         menuAnimation.init();
         menuListener();
-    })
+    // })
 }
 
 const resetMenuAnimation = () => {
@@ -61,10 +59,10 @@ const resetMenuAnimation = () => {
 
 if (window.addEventListener) {
     addEventListener('DOMContentLoaded', onLoad, false); 
-    scrollEvents.forEach(ev => scrollContainer.addEventListener('scroll', ev, false));
+    scrollContainer.addEventListener('scroll', onScrollAnimation, false);
     addEventListener('resize', resetMenuAnimation, false);
 } else if (window.attachEvent)  {
     attachEvent('onDOMContentLoaded', onLoad);
-    scrollEvents.forEach(ev => scrollContainer.attachEvent('onscroll', ev));
+    scrollContainer.attachEvent('onscroll', onScrollAnimation);
     attachEvent('onresize', resetMenuAnimation);
 }

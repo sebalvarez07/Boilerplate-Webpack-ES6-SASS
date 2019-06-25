@@ -1,6 +1,15 @@
 .intro {
-    padding-top: 10rem;
-    padding-bottom: remToVw(15rem);
+    padding-top: remToVw_sm(20rem);
+    padding-bottom: remToVw_sm(20rem);
+
+    @include breakpoint(xs) {
+        padding-top: remToVw_sm(15rem);
+    }
+
+    @include breakpoint(sm) {
+        padding-top: remToVw_sm(6rem);
+        padding-bottom: remToVw(15rem);
+    }
 
     @include breakpoint(md) {
         padding-top: remToVw(6rem);
@@ -9,25 +18,24 @@
 
 .intro-img {
     position: relative;
-    padding-right: 2rem;
     display: inline-block;
     z-index: 0;
-    font-size: 0;
-    line-height: 0;
     .img{
-        width: remToVw(80.8rem);
-        
+        width: 100%;
+        margin-bottom: 2rem;
     }
     .img-coodos {
-        position: absolute;
-        font-size: 1.6rem;
-        font-weight: 300;
+        font-size: 1.2rem;
+        font-weight: 500;
         color: $black;
-        display: block;
-        right: 0;
-        bottom: .5rem;
-        transform-origin: 100% 100%;
-        transform: rotate(90deg);
+        display: inline-block;
+        text-align: left
+    }
+
+    @include breakpoint(sm) {
+        .img-coodos {
+            font-size: 1.4rem;
+        }
     }
 }
 
@@ -37,11 +45,15 @@
     margin-bottom: 0;
 
     @include breakpoint(xs) {
-        font-size: remToVw_sm(12rem);
+        font-size: remToVw_md(18.5rem);
     }
 
     @include breakpoint(sm) {
-        font-size: remToVw(20.6rem);
+        font-size: remToVw_md(12.6rem);
+    }
+
+    @include breakpoint(md) {
+        font-size: remToVw(21.6rem);
     }
 }
 .welcome__msg-txt-c {
@@ -65,11 +77,17 @@
     top: 61%;
     transform: translateY(-50%);
 
-    @include breakpoint(sm) {
-        left: remToVw_sm(1rem);
+    @include breakpoint(xs) {
+        width: remToVw_sm(16.7rem);
+        left: remToVw_sm(2rem);
     }
 
     @include breakpoint(sm) {
+        width: remToVw_sm(11.5rem);
+        left: remToVw_sm(3.2rem);
+    }
+
+    @include breakpoint(md) {
         width: remToVw(24rem);
         left: remToVw(4.5rem);
     }
@@ -96,6 +114,7 @@
     text-align: right;
     display: block;
     overflow: hidden;
+    margin-bottom: 2.2rem;
 
     .date__content {
         display: inline-block;

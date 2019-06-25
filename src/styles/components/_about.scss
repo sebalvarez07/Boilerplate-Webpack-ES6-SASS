@@ -1,44 +1,69 @@
-.v-hidden-loco {
-    visibility: hidden;
+// .v-hidden-loco {
+//     visibility: hidden;
+// }
+
+// .v-hidden-intro {
+//     visibility: hidden;
+// }
+
+// .v-hidden-burger {
+//     visibility: hidden;
+// }
+
+$padding-top__line: remToVw(5.7rem);
+
+.a-lv-1 {
+    padding-bottom: remToVw(16rem);
+    flex-direction: column;
+    .a__left-space {
+        width: 33.333%;
+    }
+
+    @include breakpoint(sm){
+        flex-direction: row;
+    }
 }
 
-.v-hidden-intro {
-    visibility: hidden;
+.a-title-sm {
+    display: block;
+    font-size: remToVw_sm(2.5rem);
+    font-weight: bold;
+    margin-bottom: remToVw_sm(3rem);
+
+    @include breakpoint(sm) {
+        font-size: remToVw_sm(1.8rem);
+        margin-bottom: remToVw(4rem);
+    }
+
+    @include breakpoint(md) {
+        font-size: remToVw(2.5rem);
+    }
 }
 
-.v-hidden-about {
-    visibility: hidden;
-}
+.a__inner-container {
+    display: flex;
+    padding-top: $padding-top__line;
+    align-items: flex-start;
 
-.v-hidden-burger {
-    visibility: hidden;
-}
+    .a__f1 {
+        flex: 1;
+    }
 
-.v-hidden-projects {
-    visibility: hidden;
+    @include breakpoint (md) {
+        .a__left-space {
+            width: $space-lg__i-mc;
+        }
+    }
 }
 
 .about {
-    padding-left: remToVw(4.5rem);
-    padding-bottom: 4rem;
     position: relative;
-    margin-bottom: remToVw(15rem);
-
-    .about-line {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: .5rem;
-        height: 100%;
-        background: black;
-        display: block;
-        transform-origin: 50% 0;
-    }
+    margin-bottom: remToVw_sm(20rem);
 
     .about__txt {
         margin: 0;
-        font-size: remToVw(5rem);
-        line-height: remToVw(7.4rem);
+        font-size: remToVw_sm(3rem);
+        line-height: remToVw_sm(5.4rem);
         font-weight: 300;
 
         > * {
@@ -46,19 +71,101 @@
         }
     }
 
-    .about__title {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: -4rem;
-        font-size: 1.6rem;
+    .pp_tl {
         color: $black;
-        transform-origin: 100% 0;
-        transform: translateX(-100%) rotate(-90deg);
         overflow: hidden;
+        padding-top :remToVw(1.6rem);
+        display: block;
 
         .about-in {
             display: inline-block;
         }
     }
+
+    @include breakpoint(xs) {
+        .about__txt {
+            font-size: remToVw_sm(3rem);
+            line-height: remToVw_sm(4.4rem);
+        }
+    }
+
+    @include breakpoint(sm) {
+        margin-bottom: remToVw(15rem);
+        .about__txt {
+            font-size: remToVw(5rem);
+            line-height: remToVw(7.4rem);
+        }
+    }
+
+    @include breakpoint(md) {
+        .about__txt {
+            font-size: remToVw(5.8rem);
+            // padding-right: remToVw(5rem);
+        }
+        .pp_tl {
+            padding-left: remToVw(2rem);
+        }
+    }
+
+    @include breakpoint(xl) {
+        .about__txt {
+            font-size: remToVw(5rem);
+            padding-right: remToVw(20rem);
+        }
+    }
 }
+
+.a-c-c {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: remToVw(16rem);
+
+    .a-c-space {
+        width: 50%;
+    }
+
+    @include breakpoint(xs) {
+        .a-c-space {
+            width: 33.33%;
+        }
+    }
+}
+
+.a-card {
+    margin-bottom: remToVw_sm(4rem);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    .a-c-el {
+        display: block;
+        overflow: hidden;
+        font-size: remToVw_sm(3rem);
+        line-height: remToVw_sm(3.5rem);
+        font-weight: 300;
+    }
+
+    @include breakpoint(xs) {
+        margin-bottom: remToVw(5.7rem);
+        .a-c-el {
+            font-size: remToVw_sm(2rem);
+            line-height: remToVw_sm(2.5rem);
+        }
+    }
+
+    @include breakpoint(md) {
+        .a-c-el {
+            display: block;
+            overflow: hidden;
+            font-size: remToVw(3rem);
+            line-height: remToVw(4.4rem);
+            
+        }
+    }
+}
+

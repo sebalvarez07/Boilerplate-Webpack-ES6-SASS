@@ -1,25 +1,74 @@
+.contact-container {
+    margin-right: remToVw(6rem);
+    margin-left: auto;
+
+    @include breakpoint(xs) {
+        padding-left: remToVw(26rem);
+        max-width: remToVw(136rem);
+    }
+}
+
 .contact-section {
     position: relative;
     background: $black;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
     color: $grey-lighter;
     overflow: hidden;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include breakpoint(sm) {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.mtl-flor {
+    position: absolute;
+    top: 0;
+    width: remToVw(33rem);
+    right: remToVw(16rem);
+    transform: translateY(-40%);
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
 }
 
 .contact-tl {
-    font-size: 14rem;
-    position: absolute;
     text-transform: uppercase;
-    top: 4rem;
-    left: 16rem;
-    line-height: 1;
-    margin: 0;
+    font-size: 7rem;
+    margin-bottom: 2rem;
     transform-origin: 0 50%;
-    transform: rotate(90deg);
+
+    @include breakpoint(xs) {
+        font-size: 9rem;
+        padding-left: 2rem;
+        margin-bottom: 5rem;
+    }
+    
+    @include breakpoint(sm) {
+        padding-left: 0;
+        font-size: 14rem;
+        position: absolute;
+        line-height: 1;
+        top: 4rem;
+        left: 9rem;
+        margin: 0;
+        transform: rotate(90deg);
+    }
+
+    @include breakpoint(md) {
+        left: 16rem;
+    }
 
     @include breakpoint(xl) {
         left: 22rem;
+        font-size: 14rem;
     }
 }
 
@@ -34,12 +83,38 @@
 }
 
 .contact-email {
-    font-size: $font-size-md;
+    font-size: remToVw_sm(4rem);
     color: $white;
     margin-bottom: 7rem;
     display: block;
     font-weight: 400;
     text-decoration: none;
+
+    @include breakpoint(sm) {
+        font-size: remToVw_sm(3rem);
+    }
+
+    @include breakpoint(md) {
+        font-size: $font-size-md;
+    }
+}
+
+.contact-section {
+    .contact-email {
+        font-size: remToVw_sm(7rem);
+    }
+
+    @include breakpoint(xs) {
+        .contact-email {
+            font-size: remToVw_sm(4rem);
+        }   
+    }
+
+    @include breakpoint(lg) {
+        .contact-email{
+            font-size: remToVw(7rem);
+        }
+    }
 }
 
 .contact-par {

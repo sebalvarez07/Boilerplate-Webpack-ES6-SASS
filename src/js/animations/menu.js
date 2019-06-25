@@ -67,7 +67,7 @@ export class MenuAnimation {
     }
 
     playElasticLines () {
-        TweenMax.staggerFrom('.about-line__svg path', 3.5, {attr:{d:'M0,25 Q200,115 700,25'}, ease: Elastic.easeOut.config(1, 0.2)}, 0.1);
+        TweenMax.staggerFrom('.about-line__svg path', 3.5, {attr:{d:'M0,25 Q200,195 700,25'}, ease: Elastic.easeOut.config(1, 0.15)}, 0.1);
     }
 
     resetElasticLines () {

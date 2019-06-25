@@ -3,6 +3,11 @@
     @return ($size / $context) * 1vw;
 }
 
+@function remToVw_md($size){
+    $context: (1025 * 0.01) * .1rem;
+    @return ($size / $context) * 1vw;
+} 
+
 @function remToVw_sm($size){
     $context: (768 * 0.01) * .1rem;
     @return ($size / $context) * 1vw;
